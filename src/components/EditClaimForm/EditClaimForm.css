@@ -1,0 +1,163 @@
+.FormTitle2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom : 0px;
+  margin-top:9%;
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align:left;
+  /* margin-left:12%; */
+  color: brown;
+}
+
+.popup3 {
+    margin: 10px auto;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: left;
+    display: grid;
+    gap:20px;
+    height: 450px;
+    width: 700px;
+    position: relative;
+  }
+  
+  .popup3 h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup3 .close {
+    margin-left: 10px;
+    width: 110px;
+    color: #fff;
+    transition: all 200ms;
+    font-size: 28px;
+    border-radius: 3px;
+    padding :2px 6px 2px 6px;
+    text-decoration: none;
+    background-color: rgb(110, 103, 103);
+  }
+  
+  .popup3 .close2 {
+  
+    padding :2px 6px 2px 6px;
+    margin-left: 200px;
+    height: 40px;
+    width: 150px;
+    border-radius: 3px;
+    background-color: #FF8300;
+    transition: all 200ms;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .popup3 .close:hover {
+    background-color: #000000;
+    cursor: pointer;
+  }
+  
+  .popup3 .close2:hover {
+    background-color: #FFB223;
+    cursor: pointer;
+  }
+  
+  .popup3 .textConfirm {
+    font-size: 20px;
+  }
+  
+  .buttonPopUp:active {
+    background-color: transparent;
+  }
+  
+  
+  .popup3 a:focus{
+    background-color: transparent;
+    height: auto;
+  }
+
+  .popup4 {
+    margin: 120px auto;
+    padding: 20px;
+    background: rgb(90, 121, 54);
+    border: green;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    display: grid;
+    gap:20px;
+    height: 140px;
+    width: 350px;
+    position: relative;
+  }
+
+  .popup4 .close1 {
+    margin-left: 100px;
+    margin-top: -20px;
+    width: 110px;
+    color: rgb(41, 94, 25);
+    transition: all 200ms;
+    font-size: 28px;
+    border-radius: 3px;
+    padding :2px 6px 2px 6px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .popup4 a:focus{
+    background-color: transparent;
+    height: auto;
+  }
+
+  .ClaimUpdateButton {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+    background-color: rgb(255, 203, 30);
+    font-size: medium;
+    width: 150px;
+    margin-left:180px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.ClaimUpdateButton:hover {
+  background-color: #FFB223;
+  cursor: pointer;
+}
+
+.ClaimUpdateButton:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #fc8c0b;
+}
+
+.Claimcancel2 {
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  position: absolute;
+  font-weight: bold;
+  margin-left:25px;
+  transition: transform 80ms ease-in;
+letter-spacing: 1px;
+  background-color: #d3d3d3;
+  font-size: medium;
+  width: 140px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Claimcancel2:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #1b0303;
+}
+
+.Claimcancel2:hover {
+  cursor: pointer;
+
+}

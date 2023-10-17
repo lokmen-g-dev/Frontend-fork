@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+.FormTitle {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom : 0px;
+    margin-top:9%;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align:left;
+    margin-left:12%;
+    color: brown;
+}
+
+.EditForm {
+    background-color: brown;
+    height: 460px;
+    margin-left: 12%;
+    width: 850px;
+    margin-top:0px;
+    display: grid;
+    grid-template-columns: 280px auto;
+    gap: 2px;
+    
+}
+
+
+.EditInput {
+    border: 0;
+    height: 45px;
+    /* width: auto; */
+    /* max-width:450px; */
+    padding-left: 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: 1.5px solid rgb(139, 135, 135);
+    background-color: #fff8f8;
+    margin-top: 10px;
+    margin-left:10px;
+    /* margin-bottom: 0; */
+    
+    
+}
+
+.formUpdt {
+    width: auto;
+}
+
+.centerItem {
+    margin-right: -40px;
+    margin-top: -60px;
+}
+
+.legedInput span {
+    margin-right: 30px;
+    padding-left: 100px;
+    font-size: 17px;
+}
+.spanLegend {
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.profilCard {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 40px;   
+}
+
+
+.studentEdit {
+    background-color: rgb(253, 253, 253);
+    text-align: center;
+    padding: 10px 0px 30px 20px ;
+    display: grid;
+    grid-template-columns:  320px;
+}
+.update:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #1fff6a;
+}
+
+.cancel:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #ff2222;
+}
+.cancel:hover {
+	color: black;
+    cursor: pointer;
+	
+}
+.update:hover {
+	color: black;
+    cursor: pointer;
+	
+}
+
+
+.succes2 {
+	color: #4F8A10;
+    background-color: #DFF2BF;
+    margin: 0px -154px;
+    padding:15px 10px 15px 10px;
+    border: #4F8A10;
+	font-size: 22px;
+	border-radius: 5px;
+    z-index: 2;
+    position: fixed;
+    top:30px;
+    right:310px
+
+}
+
+
+.succes2.show_slide.show_slide {
+	animation: show_slide 2s ease forwards;
+}
+
+
+
+
+@keyframes show_slide {
+	0%{
+		transform: translateX(100%);
+	}
+	40%{
+		transform: translateX(-40%);
+	}
+	80%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+
+}
+
+.update:focus {
+	outline: none;
+}
+.update {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 125px;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+	
+    background-color: rgb(29, 202, 44);
+    font-size: medium;
+    width: 160px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* margin-bottom: 0px; */
+}
+
+.cancel {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    /* margin-top: 25px; */
+    position: absolute;
+    margin-top: 395px;
+    margin-left: 598px;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+	letter-spacing: 1px;
+    background-color: #d3d3d3;
+    font-size: medium;
+    width: 140px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.profilCard h2 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.lienRetour {
+    position: absolute;
+    margin-top: 155px;
+    margin-left:-120px;
+   font-size: 20px;
+   cursor: pointer;
+   color: brown;
+}
+
+
+.lienRetour:hover {
+   color: white;
+   background-color:rgba(165, 42, 42, 0.295);
+   border-radius:8px;
+}
+
+.updatePass {
+    height: 360px;
+    margin-left: 2%;
+    width: 100%;
+    margin-top:0px;
+    gap: 2px;
+    
+}
+
+.updatePass form {
+    background-color:rgb(255, 255, 255);
+
+    
+}

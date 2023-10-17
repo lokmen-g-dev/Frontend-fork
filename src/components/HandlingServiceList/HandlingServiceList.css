@@ -1,0 +1,130 @@
+.tabStudentsTitle2 {
+    margin-top: 15px;
+    z-index: 5;
+    max-width: 500px;
+    color: rgb(48, 44, 44);
+    padding: 10px 10px;
+    box-shadow: 0px 0px 25px 0px rgba(207, 199, 199, 0.644);
+    margin-left: 50px;
+    margin-bottom: 0;
+    text-align: left;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 12px 12px 0 0;
+    background: rgba(255, 255, 255, 0.753);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.tabStudentsTitle2 input {
+    width: 220px;
+    left: 0;
+    top: 0;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    border: none;
+    height: 40px;
+    background-color: #ecb0cc42;
+    padding-left: 5px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.tabStudentsTitle2 .bi-search {
+    color: white;
+    height: 40px;
+    border-radius: 0 12px 12px 0;
+    font-size: 22px;
+    background-color: rgba(83, 1, 70, 0.281);
+    padding: 8px 12px 12px;
+}
+
+.servicesTable {
+    width: 500px;
+    table-layout: fixed;
+    border-radius: 0 0 8px 8px;
+
+}
+
+.tbl-header2 {
+    width: 500px;
+    background-color: rgba(61, 7, 21, 0.4);
+    margin-left: 50px;
+
+}
+
+.tbl-content3 {
+    height: 67vh;
+    overflow-x: auto;
+    margin-top: 0px;
+    width: 500px;
+    margin-left: 50px;
+    border: 1px solid rgba(136, 103, 103, 0.3);
+    border-radius: 0 0 12px 12px;
+
+}
+
+.addService {
+    border: 0;
+    border-radius: 5px;
+    /* height: 40px; */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+    letter-spacing: 1px;
+    background-color: rgba(61, 7, 21, 0.4);
+    font-size: medium;
+    padding: 15px 30px;
+    /* width: 140px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.addService:hover {
+    background-color: rgba(61, 7, 21, 0.5);
+    cursor: pointer;
+
+}
+
+.services {
+    position: relative;
+}
+
+.sendBtn1 {
+    background-color: #D98880;
+    border: none;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.863);
+    padding: 5px 12px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 74%;
+    margin-bottom:15px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.sendBtn1:hover {
+    background-color: #C0392B;
+    color: rgba(255, 255, 255, 0.863);
+
+}
+
+.Errmodaal {
+    background-color:rgb(222, 42, 25 );
+    /* height:120px; */
+    padding:40px 20px;
+    color: rgb(255, 255, 255);
+}
+
+.Errmodaal h2 {
+    margin-top:40px;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}

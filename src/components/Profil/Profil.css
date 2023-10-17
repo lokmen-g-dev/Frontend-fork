@@ -1,0 +1,235 @@
+.body{
+    background-color: rgb(13, 105, 105);
+}
+.langDisplay {
+  display: flex;
+  width: 30%;
+  position:relative;
+  align-items: center;
+} 
+
+.lang-name {
+  margin-top: 0px;
+  margin-left: -10px;
+  font-size: 14px;
+  
+}
+.lang-img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+  right: -55px;
+  position:absolute;
+  bottom: -5px;
+}
+.lang-img2 {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+  right: -27px;
+  position:absolute;
+  bottom: -0px;
+}
+
+/* 0091547600 */
+
+
+  .title {
+    color: rgb(156, 152, 152);
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
+
+  .pdp {
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;;
+  }
+
+  .statAc {
+    position: absolute;
+    top:-15px;
+    left: 10px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+  }
+
+  .statAc span {
+    font-size: 18px;
+  }
+
+
+
+  .card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 250px;
+    gap:8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(1, 12, 17, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(2, 27, 39, 0.08);
+    border: none;
+    padding-top: 0px;
+    padding-left: 28px;
+    width: 40%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .nom {
+      margin-top: 50px;
+  }
+  p {
+      padding-right: 18px;
+  }
+
+  .upload {
+    position: relative;
+    margin: auto;
+  }
+
+  .upload .round {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    width: 32px;
+    background-color: rgba(0, 0, 0, 0.432);
+    height: 32px;
+    text-align: center;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    line-height:33px;
+  }
+
+  .upload .round input[type='file'] {
+    position: absolute;
+    /* cursor: pointer; */
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  input[type='file']::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+
+
+.editbtn {
+    font-size: 18px;
+    background-color: rgb(255, 199, 16);
+    color: rgb(27, 25, 25);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    /* padding-bottom: 8px; */
+    padding-left: 0px;
+    height: 40px;
+    width: 120px;
+    transition: transform 80ms ease-in;
+    /* padding-right: 20px; */
+    margin-right: 15px;
+    margin-left: -15px;
+    text-align: center;
+    border-radius: 8px;
+    
+
+}
+.editbtn:active {
+    transform: scale(0.90);
+}
+
+.suppbtn {
+    font-size: 18px;
+    background-color: rgb(223, 0, 0);
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    width: 120px;
+    margin-left: 55px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    height: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    /* padding-right: 20px; */
+    margin-right: 20px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.suppbtn:active{
+    transform: scale(0.90);
+
+}
+ .edt {
+     margin-left: 20px;
+ }
+
+ .editbtn:hover{
+     background-color: rgb(243, 180, 8);
+     color: rgb(255, 255, 255);
+     /* border-radius: 80px 0px 80px 20px; */
+     /* height: 40px; */
+ }
+
+ .suppbtn:hover{
+    background-color: rgb(240, 66, 66);
+    color: black;
+    /* border-radius: 20px; */
+    /* border-radius: 00px 80px 20px 80px; */
+
+}
+  
+ .homeContent .boxes {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+ .homeContent .boxes {
+   width: 90%;
+ }
+
+ .homeContent .boxes .box {
+   padding:  15px 20px ;
+   color: rgb(124, 124, 124);
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0px 0px 35px rgb(207, 199, 199);
+   width: calc(100% / 3 - 15px);
+   flex-direction: column;
+
+   display: flex;
+   border-radius: 12px;
+   align-items: center;
+ }
+
+ .box .bxtxt {
+   white-space: nowrap;
+   font-size: 18px;
+   font-weight: 500;
+ }
+
+ .box i {
+   font-size: 35px;
+ }
+
+ .box .bxnmbr {
+   font-size: 40px;
+   font-weight: 500;
+ }
+
+ .boxes .box.box2 {
+   border-left: 6px solid rgb(219, 101, 255);
+ }
+
+ .boxes .box.box3 {
+  border-left: 6px solid rgb(136, 255, 136);
+}

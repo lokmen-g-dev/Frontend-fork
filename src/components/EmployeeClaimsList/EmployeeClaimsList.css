@@ -1,0 +1,110 @@
+
+ .popup6 .content {
+    overflow: auto;  
+    margin-top: 20px;
+    height: 95%;
+    gap: 10px;
+  }
+
+
+  .claimInfEm {
+    display: grid;
+    padding: 15px;
+    /* grid-template-columns: 30% auto; */
+  }
+
+  .profil-img2 {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    margin-bottom:35px;
+  }
+
+   .stdInfoRec {
+     position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 0;
+    text-align: left;
+
+  }
+  .Tit14 {
+    margin-top: 0px;
+    z-index: 5;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgb(48, 44, 44);
+    text-align: left;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.MsgEmp {
+  margin-left: 20px;
+  background-color: transparent;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    color: rgba(82, 4, 30, 0.863);
+    padding: 5px 14px;
+    text-decoration: none;
+    display: inline-block;
+    bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    left:20px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+.MsgEmp2 {
+  background-color: transparent;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    color: rgba(82, 4, 30, 0.863);
+    padding: 5px 14px ;
+    margin-top: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgba(146, 77, 77, 0.185);
+
+}
+.MsgEmp:hover {
+  background-color: rgb(146, 77, 77);
+  color: rgba(255, 255, 255);
+
+}
+.MsgEmp2:hover {
+  background-color: rgb(146, 77, 77);
+  color: rgba(255, 255, 255);
+
+}
+  .popup6 {
+    margin: 110px 350px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 450px;
+    width: 850px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    box-shadow: 0px 0px 35px rgba(179, 179, 179, 0.712);
+  }
+
+  .popup6 .close {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(199, 0, 0);
+  }

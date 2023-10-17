@@ -1,0 +1,118 @@
+.tabEmployeesContainer {
+    /* margin-top: 8px; */
+    max-width:1000px;
+    border-radius: 0  0 8px  8px  ;
+    margin-left: 50px;
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    box-shadow: 0px 0px 25px 0px rgba(207, 199, 199, 0.644);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.EditEmployeeForm {
+    background-color: brown;
+    height: 360px;
+    margin-left: 2%;
+    width: 100%;
+    margin-top:0px;
+    display: grid;
+    grid-template-columns: 220px auto;
+    gap: 2px;
+    
+}
+.spanLegend2 {
+    font-size: 14px;
+}
+.EditEmployeeForm form {
+    background-color:rgb(255, 255, 255);
+
+    
+}
+.updateEmp {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+    background-color: rgb(255, 203, 30);
+    font-size: medium;
+    width: 150px;
+    margin-left:25%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.updateEmp:hover {
+  background-color: #FFB223;
+  cursor: pointer;
+}
+
+.modaal {
+    background-color:rgb(53, 104, 51);
+    /* height:120px; */
+    padding:40px 20px;
+    color: rgb(255, 255, 255);
+}
+
+.modaal h2 {
+    margin-top:40px;
+}
+.updateEmp:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #fc8c0b;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+
+    .tabEmployeesContainer {
+        margin-left: 30px;
+        display:grid;
+        grid-template-columns:  auto;
+    }
+    .EditEmployeeForm {
+        background-color: brown;
+        height: 460px;
+        margin-left: 2%;
+        width: 100%;
+        margin-top:0px;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2px;
+        
+    }
+    
+}
+
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+
+    .tabEmployeesContainer {
+        margin-left: 30px;
+        display:grid;
+        width:100%;
+        grid-template-columns: auto auto;
+    }
+    .EditEmployeeForm {
+        background-color: brown;
+        height: 460px;
+        margin-left: 2%;
+        width: 100%;
+        margin-top:-50px;
+        display: grid;
+        grid-template-columns:  auto;
+        gap: 2px;
+    }
+    .EditEmployeeForm form span {
+display:none
+    }
+    .profilCard p,h2 {
+        display:none
+    }
+
+    .profilCard {
+        height:70px;
+    }
+    
+}

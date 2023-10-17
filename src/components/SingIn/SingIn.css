@@ -1,0 +1,529 @@
+.signInBg {
+    background-image: url('./bgimg5.png');
+        /* background-position:right; */
+    /* min-height: 100vh; */
+    /* min-width: 1366px; */
+    padding-top: 90px;
+    left: 0;
+    bottom: 0;
+    top: -3px;
+    right: 0;
+    /* padding-left: 140px; */
+    position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.danger1 {
+	color: #ac1a2d;
+    position:absolute;
+	font-size: 15px;
+    top:0px;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow:  0 3px 10px rgba(255, 255, 255, 0.329); */
+    width: 100%;
+    top: 0;
+    /* margin-left: 0; */
+    left: 0;
+    /* background-color: transparent; */
+    z-index: 2;
+    padding-left: 2rem;
+    height: 65px;
+    transition: all 0.5s ease;
+}
+
+
+
+.buttonNav {
+	border-radius: 12px;
+    margin-right: 25px;
+	font-size: 12px;
+    background-color: transparent;
+    border: 0;
+    color:#000;
+	font-weight: bold;
+	padding: 12px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.buttonLang {
+	border-radius: 12px;
+	font-size: 12px;
+    background-color: transparent;
+    border: 0;
+    position:fixed;
+    bottom:25px;
+    left:25px;
+    height:40px;
+    color:#000;
+	font-weight: bold;
+    z-index:99;
+	letter-spacing: 1px;
+    padding:0;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+.buttonNav:focus {
+    box-shadow:  0 10px 30px rgba(7, 7, 7, 0.13); 
+    background-color: rgba(255, 255, 255, 0.322);
+    /* border: 1px solid #ffffff; */
+    color:rgb(209, 28, 28)
+}
+.buttonNav:hover {
+    box-shadow:  0 10px 30px rgba(7, 7, 7, 0.13); 
+    background-color: rgba(255, 255, 255, 0.322);
+    /* border: 1px solid #ffffff; */
+    color:#000
+}
+
+.buttonNav:active {
+    box-shadow:  0 10px 30px rgba(7, 7, 7, 0.13); 
+    background-color: rgba(255, 255, 255, 0.322);
+    /* border: 1px solid #ffffff; */
+    color:rgb(209, 28, 28)
+}
+
+.buttonNav i {
+    margin-right: 7px;
+    font-size: 15px;
+ 
+}
+
+
+.signContainer a:focus {
+    background-color: transparent;
+    transform: none;
+    transition: none;
+}
+
+
+.signContainer {
+    height: 40%;
+    animation: show_slide2 1s ease forwards;
+    /* margin-top: 25px; */
+    box-shadow:  0 5px 40px rgba(175, 164, 164, 0.473);
+    padding-top: 0;
+    padding-bottom: 50px;
+    position: absolute;
+    border-radius: 20px;
+    right: 12%;
+    top: 26%;
+    /* padding-top: 60px; */
+    width: 26%;
+    /* margin-left: 140px; */
+    background-color: rgb(255, 255, 255);
+}
+
+.signContainer h1 {
+    margin-top :60px
+}
+
+
+/* .resetContainer h1 {
+    margin-top: 50px;
+    font-size: 24px;
+} */
+
+.resetContainer button {
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+
+.signContainer a {
+    cursor: pointer;
+}
+
+.btnSwitch .btnEmp:hover {
+    cursor: pointer;
+    background-color: #fcc9c985;
+}
+
+.btnSwitch .btnEmp1:hover {
+    cursor: pointer;
+    background-color: #fcc9c985;
+}
+
+.btnSwitch .btnStd:hover {
+    cursor: pointer;
+}
+
+.btnStd1:hover {
+    cursor: pointer;
+}
+
+.signUpContainer option {
+    background-color: #eee;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.btnSwitch .btnStd {
+    background-color: #dd333385;
+    height: 100%;
+    border: 0;
+    min-height: 50px;
+    font-size: 17px;
+    margin-top: 0;
+    color: white;
+    border-radius: 20px 0 0 0;
+}
+
+.btnSwitch .btnStd1 {
+    background-color: #dd333385;
+    height: 100%;
+    border: 0;
+    min-height: 50px;
+    font-size: 17px;
+    margin-top: 0;
+    color: white;
+    border-radius: 0 20px  0 0;
+}
+
+.claimNow {
+    background: -webkit-linear-gradient(rgb(255, 140, 140), rgb(255, 80, 80));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    bottom: 60px;
+    text-align: center;
+    font-size: 44px;
+    position: relative;
+}
+
+.btnSwitch .btnEmp {
+    background-color: #ffffff;
+    height: 100%;
+    margin-top: 0;
+    min-height: 50px;
+    border: 0;
+    font-size: 17px;
+    color: #dd3333;
+    border-radius: 0 20px 0 0;
+}
+
+.btnSwitch .btnEmp1 {
+    background-color: #ffffff;
+    height: 100%;
+    min-height: 50px;
+    margin-top: 0;
+    border: 0;
+    font-size: 17px;
+    color: #ac1a2d;
+    border-radius: 20px 0 0 0;
+}
+
+.btnSwitch {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 50% 50%;
+    border-radius: 20px 20px 0 0;
+    align-items: center;
+    margin-top: 0;
+}
+
+
+.signUpContainer {
+    height: 550px;
+    position: absolute;
+    animation: show_slide 1s ease forwards;
+    top: 70px;
+    box-shadow:  0 5px 40px rgba(175, 164, 164, 0.473);
+    border-radius: 20px;
+    width: 380px;
+    display: grid ;
+    right: 150px;
+    background-color: rgb(255, 255, 255);
+}
+
+.prevLog {
+    margin-top: 9px;
+}
+
+.prevLog a {
+    color: rgb(77, 0, 177);
+    font-size: 18px;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.prevLog a:hover {
+    cursor: pointer;
+}
+
+.signUpContainer form {
+    margin-bottom: 120px;
+}
+
+.signUpContainer h1 {
+    margin-top: -50px;
+}
+
+@keyframes show_slide {
+	0%{
+		transform: translateX(70%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+
+}
+
+@keyframes show_slide2 {
+	0%{
+		transform: translateX(40%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+
+}
+
+.buttonSingIn {
+	border-radius: 20px;
+	border: 1px solid #ac1a2d;
+	background-color: #ac1a2d;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 35px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.buttonSingUp {
+	border-radius: 20px;
+	border: 1px solid #ac1a2d;
+	background-color: #ffffff;
+    margin-top: 0px;
+	color: #ac1a2d;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 35px;
+	letter-spacing: 1px;
+    margin-bottom: 90px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.buttonSingIn:hover {
+	background-color: #ffffff;
+    color: #ac1a2d;
+    cursor: pointer;
+}
+
+.hideSignIn {
+    display: none;
+}
+
+.buttonSingIn:active {
+	transform: scale(0.95);
+}
+
+.buttonSingIn:focus {
+	outline: none;
+}
+
+.buttonSingIn.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.buttonSingUp:hover {
+	background-color: #ac1a2d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.buttonSingUp:active {
+	transform: scale(0.95);
+}
+
+.buttonSingUp:focus {
+	outline: none;
+}
+
+.buttonSingUp.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.signInCon {
+    width: 633px;
+    height: 555px;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+.sng {
+    margin-top: 100px;
+    width: 1300px;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 500px auto;
+    gap: 0;
+}
+
+.formSig {
+    width: 380px;
+    margin-left: 70px;
+    height: 500px;
+    margin-top: 30px;
+    padding-top: 0;
+    border-radius: 20px;
+    box-shadow:  0 5px 40px rgba(12, 12, 12, 0.473);
+
+}
+
+.btnSwitchCont {
+    margin-top: 5px;
+    display: inline-flex;
+    height: 40px;
+}
+
+.inputSignIn  {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+    border-radius: 6px;
+    margin-top: 10px;
+	width: 90%;
+}
+.inputSignIn2 {
+    background-color: #eee;
+	border: none;
+    padding: 12px 15px;
+    width: 100%;
+    height: 100%;
+
+
+
+}
+
+ .InputPass {
+    background-color: #eee;
+	margin: 8px 0;
+    border-radius: 6px;
+    margin-top: 10px;
+	width: 90%;
+    height: 7%;
+}
+
+.logoSign {
+    margin-top: 60px;
+    width: 300px;
+    height: auto;
+}
+
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+    .signInBg {
+        background-image: url('./bgimg5.png');
+            /* background-position:right; */
+        /* min-height: 100vh; */
+        /* min-width: 1366px; */
+        padding-top: 90px;
+        background-position: right;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        /* padding-left: 140px; */
+        position: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .buttonNav {
+        display: none;
+    }
+
+    .signUpContainer {
+        /* padding-top: 30px; */
+        height: 80%;
+        animation: show_slide 1s ease forwards;
+        margin-top: 8%;
+        box-shadow:  0 5px 40px rgba(175, 164, 164, 0.473);
+        border-radius: 20px;
+        width: 60%;
+        display: grid ;
+        background-color: rgb(255, 255, 255);
+    }
+    .signUpContainer .inputSignIn  {
+        background-color: #eee;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        border-radius: 6px;
+        margin-top: 28px;
+        width: 90%;
+    }
+
+
+    .logoSign {
+        position: fixed;
+        top: 15px;
+        left:10px;
+        width: 200px;
+        height: auto;
+    }
+    .signContainer {
+        width: 50%;
+        margin-top: 0%;
+        margin-right: 0%;
+        padding-bottom: 50px;
+        height: 55%;
+    }
+   .claimNow {
+       position: relative;
+       bottom: 80px;
+   }
+
+   form {
+       padding: 0 50px;
+   }
+
+   .buttonSingIn {
+	border-radius: 20px;
+	border: 1px solid #ac1a2d;
+	background-color: #ac1a2d;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+.hideSignIn {
+    display: none;
+}
+
+.buttonSingUp {
+	border-radius: 20px;
+	border: 1px solid #ac1a2d;
+	background-color: #ffffff;
+    margin-left: 20px;
+	color: #ac1a2d;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+}

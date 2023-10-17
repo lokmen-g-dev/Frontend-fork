@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+.ClaimListTitle {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom : 0px;
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-left: 220px;
+    margin-top: 40px;
+    text-align:left;
+    color: brown;
+}
+
+.arch {
+  /* background-color: red; */
+  font-size: 19px;
+  color:#fca400;
+  margin-top: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.msg0Claim {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  color: #aaaaaa;
+  margin-top: 15%;
+}
+
+.editIcon {
+    margin-right: 10px;
+    padding : 5px 5px 5px 5px;
+    color: #ffd000;
+    font-size: 19px;
+    /* background-color: rgb(252, 252, 252); */
+    border-radius: 60px;
+}
+
+
+
+.zoomIcon {
+    margin-right: 10px;
+    font-size: 19px;
+    padding : 5px 5px 5px 5px;
+    color: #269617;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 60px;
+}
+
+.deleteIcon {
+    margin-right: 10px;
+    font-size: 19px;
+
+    padding : 5px 5px 5px 5px;
+    color: #eb1515;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 60px;
+}
+.editIcon:hover {
+    cursor: pointer;
+}
+
+.zoomIcon:hover {
+  cursor: pointer;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+}
+
+.tabContainer {
+    margin-left: 5%;
+    margin-top: 3%;
+    width:90%;
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+  .table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    background-color: rgba(180, 12, 68, 0.3);
+   }
+  .tbl-content{
+    height:73vh;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(136, 103, 103, 0.3);
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    position:relative;
+
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    border-bottom: solid 1px rgba(68, 46, 46, 0.1);
+  }
+
+  
+
+  .edtIc {
+    /* background-color: red; */
+    cursor: not-allowed;
+    
+  }
+
+  .actCl {
+    display : flex;
+    width:70px;
+    position:absolute;
+    /* height:25px; */
+    margin-top: -25px;
+    justify-content:space-between;
+    /* background-color:red; */
+  }
+ 
+
+
+  .WaitStatu {
+    background-color: #ff000023;
+    border: none;
+    border-radius: 4px;
+    color: #dd0f0f;
+    padding: 5px 12px;
+    border: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .InProgStatu {
+    background-color: #ffd90036;
+    border: none;
+    border-radius: 4px;
+    color: #ffb326;
+    border: 1px solid;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .FiniStatu {
+    background-color: rgba(67, 247, 64, 0.274);
+    border: none;
+    border-radius: 4px;
+    color: rgb(67, 146, 2);
+    border: 1px solid ;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .slide11 {
+    clear:both;
+    width:202px;
+    height:0px;
+    z-index:99;
+    overflow: hidden;
+    padding-left: 0px;
+    position: absolute;
+    cursor: pointer;
+    top: 75px;
+    left: 430px;
+    background-color: rgb(247, 210, 222);
+    text-align: center;
+    transition: height .4s ease; 
+    border-radius: 0px 0px 15px 15px;
+    border-left: solid 1px rgba(68, 46, 46, 0.2);
+    border-right: solid 1px rgba(68, 46, 46, 0.2);
+  }
+
+  .statuIc {
+    margin-left: 15px;
+    padding-left: 5px;
+    cursor: pointer;
+    /* font-size: 18px; */
+  }
+  
+  .slide11 li:hover {
+    background-color: #e9a9c9;
+  }
+
+  .slide11 ul {
+    padding-left: 0px;
+  }
+  .slide11 li {
+    padding : 8px 0px 0px 0px ;
+    list-style-type: none;
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .slide11 li i{
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 0px;
+    padding-right: 18px;
+    color: #46031c;
+  }
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+#touch:checked + .slide11 {height: 174px} 
+
+
+  
+  
+  
+  ::-webkit-scrollbar {
+      width: 12px;
+  } 
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 12px rgba(59, 5, 5, 0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 12px rgba(73, 9, 9, 0.3); 
+  }
+
+  /* *********************************Pop Up details********************** */
+  
+  .overlay12 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 300ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay12:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    height: 500px;
+    width: 600px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(199, 0, 0);
+  }
+
+  .detailsItem{
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+
+  .claimTime {
+    margin-left: 50px;
+  }
+
+  .InProgStatu2 {
+    background-color: #ffb326;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .FiniStatu2 {
+    background-color: #06c000;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .WaitStatu2 {
+    background-color: #dd0f0f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .ItemStatus {
+    position: absolute;
+    bottom: 40px;
+    
+  }
+
+  .detailsItem1{
+    /* margin-top: 20px; */
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color:#9e1225
+  }
+
+  .detailsContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 30% auto;
+  }
+  .detailsTreat{
+    padding-left: 30px;
+    margin-top: 35px;
+    padding-right: 30px;
+  }
+  .popup .close:hover {
+    color: #d82606;
+  }
+
+  .popup .content {
+    overflow: auto;  
+  }
+
+  .buttonPopUp:active {
+    background-color: transparent;
+  }
+
+  .buttonPopUp:focus {
+    background-color: transparent;
+    height: auto;
+  }
+
+
+  .close:active {
+    /* transform: scale(0.90); */
+    background-color: transparent;
+}
+.popup a:focus{
+    background-color: transparent;
+}
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+
+    /* ******************************Pop Up Delete ********************** */
+
+    
+    
+  }
+
+  .popup21 {
+    margin: 150px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup21 h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup21 .close5 {
+    position: absolute;
+    top: 130px;
+    right: 25px;
+    color: #fff;
+    transition: all 200ms;
+    font-size: 28px;
+    border-radius: 3px;
+    padding :2px 6px 2px 6px;
+
+    /* font-weight: bold; */
+    text-decoration: none;
+    background-color: rgb(110, 103, 103);
+  }
+
+  .popup21 .close2 {
+    position: absolute;
+    top: 130px;
+    padding :2px 6px 2px 6px;
+    left: 25px;
+    border-radius: 3px;
+    background-color: rgb(199, 0, 0);
+    transition: all 200ms;
+    font-size: 28px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .popup21 .close:hover {
+    background-color: #000000;
+    cursor: pointer;
+  }
+  
+  .popup21 .close2:hover {
+    background-color: #ff2b06;
+    cursor: pointer;
+  }
+
+  .popup21 .textConfirm {
+    font-size: 20px;
+  }
+
+  .buttonPopUp:active {
+    background-color: transparent;
+  }
+
+
+.popup21 a:focus{
+    background-color: transparent;
+    height: auto;
+}
+
+
+/* **************************Pop-Up-Update*************************** */

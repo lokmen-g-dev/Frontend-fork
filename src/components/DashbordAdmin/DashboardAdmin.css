@@ -1,0 +1,549 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
+
+
+
+
+.allClaimsContainer {
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid rgb(37, 38, 131) ;
+    border-radius: 6px;
+    height: 100px;
+    z-index: -99;
+    box-shadow: 0px 0px 20px rgb(224, 222, 222);
+}
+.allClaimsContainer:hover {
+    background-color: rgba(1, 11, 24, 0.152);
+    cursor: pointer;
+}
+
+ .allClaimsContainer:hover .allClaims {
+    color: rgba(13, 64, 131, 0.753);
+    cursor: pointer;
+}
+
+
+
+
+.WaitingClaimsContainer {
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid rgb(177, 27, 27) ;
+    border-radius: 6px;
+    height: 100px;
+    padding: 0;
+    z-index: -99;
+    box-shadow: 0px 0px 20px rgb(224, 222, 222);
+}
+
+.gb {
+  color: rgba(79, 77, 255, 0.616);
+}
+.WaitingClaimsContainer:hover {
+    background-color: rgba(177, 27, 27, 0.152);
+    cursor: pointer;
+}
+
+ .WaitingClaimsContainer:hover .allClaims {
+    color: rgba(177, 27, 27, 0.753);
+    cursor: pointer;
+}
+
+
+.InProgressClaimsContainer {
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid rgb(255, 196, 34) ;
+    border-radius: 6px;
+    height: 100px;
+    z-index: -99;
+    box-shadow: 0px 0px 20px rgb(224, 222, 222);
+}
+
+.InProgressClaimsContainer:hover {
+    background-color: rgba(255, 196, 34, 0.152);
+    cursor: pointer;
+}
+
+ .InProgressClaimsContainer:hover .allClaims {
+    color: rgba(255, 196, 34, 0.753);
+    cursor: pointer;
+}
+
+.FinishedClaimsContainer {
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid rgb(0, 219, 18) ;
+    border-radius: 6px;
+    z-index: -99;
+    height: 100px;
+    box-shadow: 0px 0px 20px rgb(224, 222, 222);
+}
+
+/* body {
+    background-color: white;
+} */
+
+.serviceDis {
+  display: flex;
+  justify-content: space-between; 
+  background-color: #fff;
+  
+}
+
+.serviceTab {
+    width: 210px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px 8px 8px 8px ;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: #fff;
+}
+.servTit {
+  display: flex;
+  align-items: center;
+}
+
+.serviceCard {
+  height: 50px;
+  margin-left: 5px;
+  width: 170px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  justify-content: space-between;
+  background-color: #c2c2c25d;
+}
+.serviceCard i {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+
+  position: relative;
+}
+.serviceTab .bi-file-plus {
+  color: white;
+  height: 35px;
+  width: 35px;
+  padding: 5px 10px 5px 10px;
+  margin-left: 25px;
+  border-radius: 6px ;
+  font-size: 20px;
+  margin-top: -8px;
+  background-color: rgba(40, 0, 184, 0.637);
+}
+
+
+
+
+
+
+.servTi {
+  margin-top: 0px;
+  z-index: 5;
+  color: rgb(48, 44, 44);
+  padding: 13px 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  letter-spacing: 1.2px;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 12px  12px 0  0  ;
+  /* background: rgba(255, 255, 255, 0.753); */
+
+}
+
+.ClaimsPerMont{
+  width:100%;
+  /* height:70% */
+}
+
+.empCount {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(235, 235, 235);
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top:-20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+}
+.ClaimsTit {
+    margin-left: 25px;
+    font-size: 27px;
+    color: rgb(37, 38, 131);
+    margin-bottom: -17px;
+}
+
+.ClaimsTit1 {
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(177, 27, 27);
+    margin-bottom: -17px;
+}
+
+.ClaimsTit2 {
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(255, 196, 34);
+    margin-bottom: -17px;
+}
+
+.ClaimsTit3 {
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(0, 219, 18);
+    margin-bottom: -17px;
+}
+
+.ClaimInf {
+    margin-left: 25px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(59, 59, 57);
+}
+
+.allClaims {
+    margin-left: 140px;
+    font-size: 45px;
+    color :rgb(201, 201, 200);
+    margin-bottom: -10px;
+}
+
+.tessst {
+    background-color: rgb(202, 202, 83);
+    margin-left: 200px;
+}
+
+.DoughStyle {
+    height: auto;
+    position: absolute;
+    /* z-index:-1; */
+    right: 0px;
+    padding-bottom: 5px;
+    width: 23.5%;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.DoughStyle2 {
+  position: absolute;
+  /* z-index:-1; */
+  right: 0px;
+  padding-bottom: 5px;
+  width: 23.5%;
+}
+
+
+.wtg {
+    color:rgb(177, 27, 27);
+    margin-left: 4px;
+}
+
+.prg {
+    color: rgb(255, 196, 34);
+    margin-left: 4px;
+}
+
+.fnsh {
+    color:rgb(0, 219, 18);
+    margin-left: 4px;
+}
+
+.statTit {
+    margin-top: 0px;
+    z-index: 5;
+    color: rgb(48, 44, 44);
+    padding: 13px 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 12px  12px 0  0  ;
+    background: rgba(255, 255, 255, 0.753);
+
+}
+
+.lastClaimsTab {
+    height: 300px;
+    background-color: red;
+    /* width: 750px; */
+}
+
+.gridDash {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 20px;
+}
+
+.tabContainer1 {
+    width: 100%;
+    border-radius: 8px 8px 8px 8px ;
+    border: 1px solid rgb(211, 211, 211);
+    /* margin-top: 8px; */
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.table2{
+    width:825px;
+    table-layout: fixed;
+  }
+
+.thCl {
+    padding: 15px ;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+
+
+  .tdCl{
+    padding: 15px;
+    text-align: left;
+    align-items: center;
+    /* display:flex; */
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    border-bottom: solid 1px rgba(170, 17, 17, 0.0);
+  }
+
+
+  .trCl:hover{
+    background-color: rgba(232, 199, 253, 0.3);
+  }
+
+  .tdCl .profil-img {
+    position:absolute;
+    z-index:1;
+
+    margin-top:-10px;
+  }
+
+  .tbl-header11 .tit {
+    text-align:center;
+  }
+
+
+  .trCl {
+    display: grid;
+    grid-template-columns: 15% 25% 20% 20% 20% ;
+    height: 55px;
+  }
+  
+
+  .tbl-header11{
+      height: 50px;
+      margin-top: -5px;
+    background-color: rgba(241, 82, 255, 0.25);
+   }
+
+.icnCl {
+    font-size: 24px;
+    color: rgb(143, 49, 32);
+    margin-left: 15px;
+
+}
+
+.table2 .trCl:hover {
+  background-color: transparent;
+}
+
+
+  .notification-box {
+    position: absolute;
+    z-index: 99;
+    top: 10px;
+    right: 280px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .notification-bell * {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(219, 217, 217);
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+  }
+  .bell-top {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px 3px 0 0;
+  }
+  .bell-middle {
+    width: 25px;
+    height: 25px;
+    margin-top: -1px;
+    border-radius: 12.5px 12.5px 0 0;
+  }
+  .bell-bottom {
+    position: relative;
+    z-index: 0;
+    width: 32px;
+    height: 2px;
+  }
+  .bell-bottom::before,
+  .bell-bottom::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+  }
+  .bell-bottom::before {
+    left: 1px;
+    border-bottom: 4px solid rgb(219, 217, 217);
+    border-right: 0 solid transparent;
+    border-left: 4px solid transparent;
+  }
+  .bell-bottom::after {
+    right: 1px;
+    border-bottom: 4px solid rgb(219, 217, 217);
+    border-right: 4px solid transparent;
+    border-left: 0 solid transparent;
+  }
+  .bell-rad {
+    width: 8px;
+    height: 4px;
+    margin-top: 2px;
+    border-radius: 0 0 4px 4px;
+    /* animation: rad 1s 2s both infinite; */
+  }
+  .notification-count {
+    position: absolute;
+    z-index: 1;
+    top: -4px;
+    right: -6px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: #ff4927;
+    color: #fff;
+    /* animation: zoom 3s 3s both infinite; */
+  }
+  @keyframes bell {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(30deg); }
+    20% { transform: rotate(0); }
+    80% { transform: rotate(0); }
+    90% { transform: rotate(-30deg); }
+    100% { transform: rotate(0); }
+  }
+  @keyframes rad {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(6px); }
+    20% { transform: translateX(0); }
+    80% { transform: translateX(0); }
+    90% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+  }
+  @keyframes zoom {
+    0% { opacity: 0; transform: scale(0); }
+    10% { opacity: 1; transform: scale(1); }
+    50% { opacity: 1; }
+    51% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+ 
+
+.barNotif {
+    height: 60px;
+    width: 100%;
+    margin-left: 46px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 25px rgb(207, 199, 199);
+    /* border-bottom:  1px solid rgb(211, 211, 211); */
+}
+
+.adminDet {
+    position: absolute;
+    right: 70px;
+    border-left: 1px solid rgb(128, 122, 122);
+    padding-left: 20px;
+    height: 35px;
+    top:-10px;
+    padding-top: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(102, 101, 101);
+
+}
+
+
+.pdpAdmin {
+    height: 35px;
+    position: absolute;
+    right: 40px;
+    top:-18px;
+    width: 35px;
+    border-radius: 50px;
+}
+
+.actProfil {
+    position : absolute;
+    right: 10px;
+    top : 16px ;
+    font-size: 22px;
+    color: rgb(167, 164, 164);
+
+}
+
+.profilAd:hover {
+    cursor: pointer;
+}
+
+.actProfil:hover {
+    cursor: pointer;
+    color: black;
+}
+
+/* *************** */
+
+.icon9 {
+    font-size: 20px;
+    color: rgb(156, 156, 156);
+    margin-bottom: 0px;
+}
+
+.hiddenText {
+    font-size: 16px;
+    color:rgb(82, 82, 82) ;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    font-family: 'Catamaran', sans-serif;}
+
+.box12 {
+    display: grid;
+    position: absolute;
+    border-radius: 5px;
+    right: 15px;
+    top:65px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    grid-template-columns: 35px auto;
+    gap: 7px;
+    box-shadow: 0px 0px 25px rgb(207, 199, 199);
+    background-color: rgb(255, 255, 255);
+}
+
+.box12:hover {
+    cursor: pointer;
+}
+
+
+

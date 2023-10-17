@@ -1,0 +1,30 @@
+.sideBar .bi-chevron-down {
+    /* margin-left: 30px; */
+    margin-top: 4px;
+}
+
+
+.sideBar .bi-chevron-up {
+    /* margin-left: 30px; */
+    margin-top: 4px;
+}
+
+.sideBar .sub-menu {
+    padding: 0px 3px 5px 70px;
+    margin-top: -10px;
+    display: none;
+}
+
+.sub-menu.showCat {
+    display: block;
+    transition: all 2.5s none;
+}
+
+.sideBar .sub-menu li:hover {
+    background-color: rgba(87, 17, 52, 0.514);
+    border-radius: 12px;
+}
+
+
+
+

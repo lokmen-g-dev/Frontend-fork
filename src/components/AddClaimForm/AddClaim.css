@@ -1,0 +1,182 @@
+.claimCard {
+    text-align: left;
+    display: grid;
+    height: 460px;
+    background-color:#fff;
+    width: 750px;
+    margin-top:0px;
+    margin-left:60px;
+    grid-template-columns:  220px 300px;
+}
+
+.AddClaimTitle {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom : 0px;
+    margin-top:9%;
+    margin-bottom: 10px;
+    margin-left:60px;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align:left;
+    color: brown;
+}
+
+.ClaimAddButton {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+    transition: transform 80ms ease-in;
+    background-color: rgb(29, 202, 44);
+    font-size: medium;
+    width: 150px;
+    margin-left:90px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Claimcancel {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    margin-top :-79px;
+    position: absolute;
+    font-weight: bold;
+    margin-left:450px;
+    transition: transform 80ms ease-in;
+	letter-spacing: 1px;
+    background-color: #d3d3d3;
+    font-size: medium;
+    width: 140px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.noAble {
+    height: 100%;
+    background-color: #ffdbdb;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 40px 15px;
+    color: #c41a1a;
+
+}
+.noAble i{
+    font-size: 30px;
+    margin-top:10px;
+}
+
+.Claimcancel:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #ff2222;
+}
+
+.ClaimAddButton:active {
+	transform: scale(0.95);
+    color: rgb(255, 255, 255);
+    background-color: #09c557;
+}
+
+.ClaimAddButton:hover {
+    cursor: pointer;
+	
+}
+.Claimcancel:hover {
+    cursor: pointer;
+	
+}
+
+.DescInput {
+    border: 0;
+    height: Auto;
+    width: auto;
+    padding-left: 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: 1.5px solid rgb(139, 135, 135);
+    background-color: #fff8f8;
+    margin-top: 10px;
+    margin-left:10px;
+
+}
+
+.AddBtn {
+    border: 0;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    padding-top:6.5px;
+    border: 1.5px solid rgb(139, 135, 135);
+    background-color: #fff8f8;
+    margin-top: 10px;
+    margin-left:10px;
+    
+}
+
+.succes3 {
+	color: #4F8A10;
+    background-color: #DFF2BF;
+    margin: -25px -153px;
+    padding:15px 10px 15px 10px;
+    border: #4F8A10;
+	font-size: 18px;
+	border-radius: 5px;
+    z-index: 2;
+    position: fixed;
+    top:62px;
+    right:430px
+
+}
+
+
+.succes3.show_slide.show_slide {
+	animation: show_slide 2s ease forwards;
+}
+
+
+
+
+@keyframes show_slide {
+	0%{
+		transform: translateX(100%);
+	}
+	40%{
+		transform: translateX(-40%);
+	}
+	80%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+
+}
+
+
+
+.dangermsg {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.errors {
+    width: auto;
+    height: auto;
+    color: rgb(214, 11, 11);
+	font-size: 22px;
+    position: absolute;
+    top:60px;
+    right:276px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap:10px;
+    align-items: center;
+
+}
+
+.errIcon {
+    font-size: 40px;
+    align-items: center;
+}

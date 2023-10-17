@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@400&display=swap');
+.WaitStatu1 {
+    background-color: #ff000025;
+    border: 1px solid rgba(253, 78, 78, 0.863);
+    border-radius: 4px;
+    color: rgba(253, 78, 78, 0.863);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.FiniStatu1 {
+    background-color: rgba(96, 211, 104, 0.267);
+    border: 1px solid rgba(53, 139, 18, 0.801);
+    border-radius: 4px;
+    color: rgba(53, 139, 18, 0.801);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .InProgStatu1 {
+    background-color: #ffd13849;
+    /* border: none; */
+    border-radius: 4px;
+    color: rgb(247, 136, 18);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgb(247, 136, 18);
+    font-size: 15px;
+  }
+
+  .seendRe{
+    height: 30px;
+    width: 40%;
+  }
+.treatBtn {
+    background-color: rgba(47, 47, 199, 0.123);
+    border: none;
+    border-radius: 10px;
+    color: rgba(68, 0, 255, 0.863);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.treatBtn1 {
+    background-color: rgba(81, 146, 89, 0.171);
+    color: rgb(6, 70, 53);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    right:20px;
+    font-size: 20px;
+}
+.treatgrp {
+  position: absolute;
+  bottom: 20px;
+  right:20px;
+
+}
+.textar {
+  height: 150px;
+}
+
+.modalResp {
+  width: 150%;
+  height: 300px;
+  padding: 15px;
+}
+
+.modalResp span {
+  font-size: 18px;
+}
+
+.treatAd {
+  width: 140px;
+  color: rgb(6, 70, 53);
+  font-size: 20px;
+  background-color: rgba(81, 146, 89, 0.171);
+}
+
+.treatAd:hover {
+  cursor: pointer;
+    background-color: rgba(81, 146, 89, 0.493);
+    color: rgba(255, 255, 255, 0.863);
+}
+
+.treatAd i {
+  font-size: 18px;
+}
+
+
+.treatBtn1:hover {
+    cursor: pointer;
+    background-color: rgba(81, 146, 89, 0.493);
+    color: rgba(255, 255, 255, 0.863);
+}
+
+.file64 {
+  height: 400px;
+}
+
+.treatBtn:hover {
+    cursor: pointer;
+    background-color: rgba(47, 47, 199, 0.493);
+    color: rgba(255, 255, 255, 0.863);
+}
+
+.srch ul {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 129px;
+    right: 250px;
+    padding-right: 60px;
+    box-shadow: 0px 0px 35px rgb(201, 198, 198);
+    padding-left: 0;
+    padding-bottom: 20px;
+    border-radius: 0 0 10px 10px ;
+    height: auto;
+}
+
+.srch .sub-menu {
+    display: none;
+}
+
+.srch .showCat {
+    display: block;
+    transition: all 2.5s none;
+}
+.srch ul li {
+    position: relative;
+    height: 40px;
+    width: 140%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+    
+}
+
+.srch ul li a:hover {
+    background-color:  rgba(146, 57, 116, 0.562);
+}
+.srch ul li a {
+    color: rgb(53, 49, 49);
+    background-color: rgba(146, 57, 116, 0.253);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.srch ul li a i {
+    height: 50px;
+    font-size: large;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.treatInfo {
+  margin-top: 50px;
+}
+.treatInfo .detailsItem1 {
+  margin-bottom: 20px;
+  color: rgb(8, 8, 8);
+  font-size: 21px;
+}
+
+/* *****************PopUp****************** */
+
+.popup1 {
+    margin: 110px 350px;
+    padding: 20px;
+    
+    background: #ffffff;
+    border-radius: 5px;
+    height: 450px;
+    width: 850px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    box-shadow: 0px 0px 35px rgba(179, 179, 179, 0.712);
+  }
+
+  .popup2 {
+    margin: 210px 550px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 250px;
+    width: 450px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    box-shadow: 0px 0px 35px rgba(179, 179, 179, 0.712);
+  }
+
+  .popup1 h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup1 .close {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(199, 0, 0);
+  }
+
+
+  .treatBtn1:disabled {
+    background-color: rgb(202, 202, 202);
+    color: #333;
+    cursor: not-allowed;
+  }
+
+  .popup2 .close {
+    position: absolute;
+    top: -10px;
+    background-color: transparent;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(199, 0, 0);
+  }
+
+  .popup4 .close {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+  .popup4 .close:hover {
+    color: #d82606;
+  }
+
+
+  .popup1 .close:hover {
+    color: #d82606;
+  }
+
+  .popup2 .close:hover {
+    color: #d82606;
+    background-color: transparent;
+  }
+
+  .popup1 .content {
+    overflow: auto;  
+    margin-top: 20px;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 320px auto;
+    gap: 10px;
+  }
+
+  .popup1 .profilInfo {
+
+        border-right: 2px solid rgb(192, 9, 9);
+    
+  }
+
+  .popup1 a:focus{
+    background-color: transparent;
+}
+
+
+
+.Tit12 {
+    margin-top: 0px;
+    z-index: 5;
+    color: rgb(48, 44, 44);
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.popup1 img {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    height: 150px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+.lienRetour1 {
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+   font-size: 20px;
+   cursor: pointer;
+   color: brown;
+   text-decoration: underline;
+}
+
+.profilInfo .bi-arrow-left {
+    margin-right: 10px;
+}
+
+
+.Tit13 {
+    margin-top: 0px;
+    z-index: 5;
+    color: rgb(48, 44, 44);
+    text-align: left;
+    margin-left: 10px;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.dateR {
+  position: relative;
+}
+.profilInfo {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 0px;   
+}
+
+.claimInfo h2 {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+.profilInfo h2 {
+  font-family: 'Sulphur Point', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.dateDet {
+    position: absolute;
+    right: 10px;
+    font-size: 15px
+}
+
+
+.WaitStatu2 {
+    background-color: #ff00001a;
+    border: none;
+    border-radius: 4px;
+    color: rgb(207, 91, 91);
+    padding: 5px 12px;
+    margin-left: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 20px;
+}
+
+.statuDet {
+
+    margin-top: 70px;
+    margin-left: 90px;
+}
+
+.FiniStatu2 {
+    background-color: rgba(38, 194, 48, 0.151);
+    border: none;
+    margin-left: 20px;
+    border-radius: 4px;
+    color: rgb(50, 177, 0);
+    padding: 5px 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 20px;
+  }
+
+  .InProgStatu2 {
+    background-color: #ffd13849;
+    border: none;
+    border-radius: 4px;
+    color: rgb(255, 196, 0);
+    padding: 5px 12px;
+    text-decoration: none;
+    margin-left: 20px;
+    display: inline-block;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 20px;  }
+
+    .thStd .bi-search {
+        background-color: transparent;
+        display: inline-block;
+    }
+
+    .overlay12 {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 300ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .overlay12:target {
+        visibility: visible;
+        opacity: 1;
+        z-index:99;
+      }
+      
+      .popup5 {
+        margin: 60px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        height: 500px;
+        width: 600px;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+
+      .close11 {
+          font-size: 70px;
+          background-color:#d82606;
+          z-index: 999;
+
+      }
+
+
+      @media only screen and (min-width: 551px) and (max-width: 850px) {
+          .popup1 {
+            margin: 160px 80px;
+            padding: 20px;
+            
+            background: #ffffff;
+            border-radius: 5px;
+            height: 450px;
+            width: 650px;
+          }
+
+          .popup2 {
+            margin: 200px 180px;
+            padding: 20px;
+            
+            background: #ffffff;
+            border-radius: 5px;
+            height: 220px;
+            width: 350px;
+          }
+
+          .popup1 .content {
+            overflow: auto;  
+            margin-top: 20px;
+            height: 95%;
+            display: grid;
+            grid-template-columns: 220px auto;
+            gap: 10px;
+          }
+
+          .popup4 {
+            margin: 400px auto;
+            padding: 40px 20px 20px 20px;
+            background: rgb(90, 121, 54);
+            border: green;
+            color: white;
+            border-radius: 5px;
+            text-align: left;
+            display: grid;
+            gap:20px;
+            width: 480px;
+            position: relative;
+          }
+      }
+
+      @media only screen and (max-width: 550px) {
+        .popup1 {
+            margin: 60px 20px;
+            padding: 10px;
+            
+            background: #ffffff;
+            border-radius: 5px;
+            height: 680px;
+            width: 340px;
+          }
+
+          .popup2 {
+            margin: 160px 20px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 5px;
+            height: 200px;
+            width: 340px;
+          }
+
+          .popup1 .content {
+            overflow: auto;  
+            margin-top: 20px;
+            height: 85%;
+            display: grid;
+           grid-template-columns: auto;
+          }
+
+      
+          .popup1 .profilInfo {
+
+            border-bottom: 2px solid rgb(192, 9, 9);
+            border-right: 0px solid rgb(192, 9, 9);
+        
+      }
+
+      .popup2 .treatBtn1 {
+        background-color: rgba(81, 146, 89, 0.171);
+        color: rgb(6, 70, 53);
+        border: none;
+        border-radius: 10px;
+        padding: 5px 12px;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        font-size: 18px;
+      }
+
+      .treatBtn1 {
+        background-color: rgba(81, 146, 89, 0.171);
+        color: rgb(6, 70, 53);
+        border: none;
+        border-radius: 10px;
+        padding: 5px 12px;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;
+        bottom: 60px;
+        left: 10px;
+        font-size: 18px;
+    }
+
+    .popup1 img {
+        margin-bottom: 20px;
+        margin-top: 0px;
+        height: 110px;
+        border-radius: 50%;
+        width: 110px;
+    }
+
+
+    .popup4 {
+        margin: 300px auto;
+        padding: 20px;
+        background: rgb(90, 121, 54);
+        border: green;
+        color: white;
+        border-radius: 5px;
+        text-align: left;
+        display: grid;
+        gap:20px;
+        height: 140px;
+        width: 350px;
+        position: relative;
+      }
+      }
