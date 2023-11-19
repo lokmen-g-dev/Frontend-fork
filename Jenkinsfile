@@ -2,7 +2,7 @@ pipeline {
     agent any
     
      environment {     
-        DOCKER_REGISTRY = "192.168.137.140:5000"
+        DOCKER_REGISTRY = "docker-registry:5000"
         DOCKER_IMAGE_NAME = "pfee/frontend"  // Adjusted to lowercase for Docker compatibility
         DOCKER_IMAGE_TAG = "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}"
     }
