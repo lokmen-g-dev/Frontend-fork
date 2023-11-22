@@ -5,7 +5,7 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "http://192.168.137.129:1111"
-        NEXUS_REPOSITORY = "front-end" 
+        NEXUS_REPOSITORY = "back-end" 
         NEXUS_CREDENTIAL_ID = "admin"
         DOCKER_IMAGE_NAME = "front-end"
         DOCKER_IMAGE_TAG = "${NEXUS_REPOSITORY}/${DOCKER_IMAGE_NAME}:latest" 
