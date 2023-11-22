@@ -2,9 +2,13 @@ pipeline {
     agent any
     
      environment {     
-        DOCKER_REGISTRY = "docker-registry:5000"
-        DOCKER_IMAGE_NAME = "pfee/frontend"  // Adjusted to lowercase for Docker compatibility
-        DOCKER_IMAGE_TAG = "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}"
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "http://192.168.137.129:1111"
+        NEXUS_REPOSITORY = "front-end" 
+        NEXUS_CREDENTIAL_ID = "admin"
+        DOCKER_IMAGE_NAME = "front-end"
+        DOCKER_IMAGE_TAG = "${NEXUS_REPOSITORY}/${DOCKER_IMAGE_NAME}:latest" 
     }
     stages {
         stage('Checkout Code') {
@@ -26,15 +30,24 @@ pipeline {
                 }
             }
         }
-      stage('Build and Push Docker Registry') {
+           stage('Build Docker Image') {
             steps {
                 script {
-                    
-                    docker.build("${DOCKER_IMAGE_TAG}", "-f Dockerfile .")
+                    // Build the Docker image
+                    def customImage = docker.build("${DOCKER_IMAGE_TAG}")
+                }
+            }
+        }
 
-                    
-                        docker.image("${DOCKER_IMAGE_TAG}").push()
-                    
+        stage('Push Docker Image to Nexus') {
+            steps {
+                script {
+                    // Log in to Docker registry
+                    docker.withRegistry("${NEXUS_URL}", "${NEXUS_CREDENTIAL_ID}") {
+                        // Push the Docker image to Nexus
+                        def customImage = docker.image("${DOCKER_IMAGE_TAG}")
+                        customImage.push()
+                    }
                 }
             }
         }
