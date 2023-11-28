@@ -54,12 +54,12 @@ pipeline {
         stage('Deploy to kubernetes'){
 	            steps{
 	                
-	                    sh "scp -o StrictHostKeyChecking=no service.yaml deployment.yaml centos@192.168.137.135:/home/centos/"
+	                    sh "sudo scp -o StrictHostKeyChecking=no service.yaml deployment.yaml centos@192.168.137.135:/home/centos/"
 	                    script{
 	                        try{
-	                            sh "ssh centos@192.168.137.135 kubectl apply -f ."
+	                            sh "sudo ssh centos@192.168.137.135 kubectl apply -f ."
 	                        }catch(error){
-	                            sh "ssh centos@192.168.137.135 kubectl create -f ."
+	                            sh "sudo ssh centos@192.168.137.135 kubectl create -f ."
 	                        }
 	                    
 	                }
