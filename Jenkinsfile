@@ -53,9 +53,7 @@ pipeline {
         }
         stage('Deploy to kubernetes'){
 	            steps{
-	                sh "chmod +x changeTag.sh"
-	                sh "./changeTag.sh ${DOCKER_TAG}"
-	                sshagent(['kubernetes-master']) {
+	                
 	                    sh "scp -o StrictHostKeyChecking=no service.yaml deployment.yaml centos@192.168.137.135:/home/centos/"
 	                    script{
 	                        try{
@@ -63,7 +61,7 @@ pipeline {
 	                        }catch(error){
 	                            sh "ssh centos@192.168.137.135 kubectl create -f ."
 	                        }
-	                    }
+	                    
 	                }
 	            }
         }
