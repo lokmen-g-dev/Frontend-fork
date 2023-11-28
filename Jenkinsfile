@@ -51,13 +51,22 @@ pipeline {
                 }
             }
         }
-          stage('Deploying React.js container to Kubernetes') {
-      steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
+        stage('Deploy to kubernetes'){
+	            steps{
+	                sh "chmod +x changeTag.sh"
+	                sh "./changeTag.sh ${DOCKER_TAG}"
+	                sshagent(['kubernetes-master']) {
+	                    sh "scp -o StrictHostKeyChecking=no service.yaml deployment.yaml centos@192.168.137.135:/home/centos/"
+	                    script{
+	                        try{
+	                            sh "ssh centos@192.168.137.135 kubectl apply -f ."
+	                        }catch(error){
+	                            sh "ssh centos@192.168.137.135 kubectl create -f ."
+	                        }
+	                    }
+	                }
+	            }
         }
-      }
-    }
         
     }
 }
