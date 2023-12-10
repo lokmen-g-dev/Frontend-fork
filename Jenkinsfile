@@ -20,14 +20,7 @@ pipeline {
                 }
             }
         }
-	      stage('Ansible Deployment') {
-            steps {
-                script {
-                    // Assuming you have Ansible installed on the Jenkins machine
-                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
-                }
-            }
-        }
+	    
         stage('Sonar Analysis') {
             steps {
                 script {
@@ -57,6 +50,15 @@ pipeline {
                         def customImage = docker.image("${DOCKER_IMAGE_TAG}")
                         customImage.push()
                     }
+                }
+            }
+        }
+
+	      stage('Ansible Deployment') {
+            steps {
+                script {
+                    // Assuming you have Ansible installed on the Jenkins machine
+                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
                 }
             }
         }
