@@ -1,33 +1,27 @@
 - name: Copy and Apply Kubernetes YAML
-  hosts: 192.168.137.135
-  gather_facts: false
-  become: true
-  ansible_user: root
-  ansible_ssh_private_key_file: /root/.ssh/id_rsa
-
-
-- name: Copy and Apply Kubernetes YAML
   hosts: 192.168.137.135 
   gather_facts: false
   become: true
- 
+  vars:
+    ansible_user: root
+    ansible_ssh_private_key_file: /root/.ssh/id_rsa
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
   tasks:
     - name: Copy k8s-deply.yaml to remote host
       copy:
         src: k8s-deply.yaml  
         dest: k8s-deply.yaml  
         mode: 0644
- 
+
     - name: Copy secret-file.yaml to remote host
       copy:
         src: secret.yaml
         dest: secret.yaml 
         mode: 0645
- 
+
     - name: Apply test.yaml using kubectl
       command: "kubectl apply -f k8s-deply.yaml"
- 
+
     - name: Apply secret.yaml using kubectl
       command: "kubectl apply -f secret.yaml"
-  vars:
-    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
