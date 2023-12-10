@@ -2,6 +2,7 @@ pipeline {
     agent any
     
      environment {     
+	ANSIBLE_PLAYBOOK = 'ansible-deploy.yaml'
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "http://192.168.137.129:1111"
@@ -51,19 +52,13 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to kubernetes'){
-	            steps{
-	                
-	                    sh "sudo scp -o StrictHostKeyChecking=no service.yaml deployment.yaml centos@192.168.137.135:/home/centos/"
-	                    script{
-	                        try{
-	                            sh "sudo ssh centos@192.168.137.135 kubectl apply -f ."
-	                        }catch(error){
-	                            sh "sudo ssh centos@192.168.137.135 kubectl create -f ."
-	                        }
-	                    
-	                }
-	            }
+       stage('Ansible Deployment') {
+            steps {
+                script {
+                    // Assuming you have Ansible installed on the Jenkins machine
+                    sh "ansible-playbook ${ANSIBLE_PLAYBOOK}"
+                }
+            }
         }
         
     }
