@@ -56,7 +56,7 @@ pipeline {
             steps {
                 script {
                     // Assuming you have Ansible installed on the Jenkins machine
-                    sh "ansible-playbook ${ANSIBLE_PLAYBOOK}"
+                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
                 }
             }
         }
