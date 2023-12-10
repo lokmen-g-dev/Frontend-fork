@@ -20,6 +20,14 @@ pipeline {
                 }
             }
         }
+	      stage('Ansible Deployment') {
+            steps {
+                script {
+                    // Assuming you have Ansible installed on the Jenkins machine
+                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
+                }
+            }
+        }
         stage('Sonar Analysis') {
             steps {
                 script {
@@ -52,14 +60,7 @@ pipeline {
                 }
             }
         }
-       stage('Ansible Deployment') {
-            steps {
-                script {
-                    // Assuming you have Ansible installed on the Jenkins machine
-                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
-                }
-            }
-        }
+     
         
     }
 }
