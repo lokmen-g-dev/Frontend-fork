@@ -59,6 +59,7 @@ pipeline {
             steps {
                 script {
                     // Assuming you have Ansible installed on the Jenkins machine
+			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deploy.yaml"
                     sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
                 }
             }
