@@ -9,7 +9,8 @@ pipeline {
         NEXUS_REPOSITORY = "back-end" 
         NEXUS_CREDENTIAL_ID = "admin"
         DOCKER_IMAGE_NAME = "front-end"
-        DOCKER_IMAGE_TAG = "${NEXUS_REPOSITORY}/${DOCKER_IMAGE_NAME}:latest" 
+	BUILD_NUMBER = "${BUILD_NUMBER}"
+        DOCKER_IMAGE_TAG = "${NEXUS_REPOSITORY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}" 
     }
     stages {
         stage('Checkout Code') {
