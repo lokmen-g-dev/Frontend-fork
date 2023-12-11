@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react-container
-        image: 192.168.137.129:1111/back-end/front-end:latest
+        image: 192.168.137.129:1111/back-end/front-end:<IMAGE_TAG>
         ports:
         - containerPort: 3000
       imagePullSecrets:
