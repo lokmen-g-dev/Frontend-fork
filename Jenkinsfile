@@ -21,15 +21,18 @@ pipeline {
                 }
             }
         }
-	     stage('Ansible Deployment') {
+	         stage('Sonar Analysis') {
             steps {
                 script {
-                    // Assuming you have Ansible installed on the Jenkins machine
-			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deply.yaml"
-                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
+                    nodejs(nodeJSInstallationName: 'Node') {
+                        sh "npm install"
+                        sh "npm install sonar-scanner"
+                        sh "npm run sonar"
+                    }
                 }
             }
         }
+	     
 	         stage('Build Docker Image') {
             steps {
                 script {
@@ -51,18 +54,12 @@ pipeline {
                 }
             }
         }
-
-	     
-     
-	    
-        stage('Sonar Analysis') {
+	    stage('Ansible Deployment') {
             steps {
                 script {
-                    nodejs(nodeJSInstallationName: 'Node') {
-                        sh "npm install"
-                        sh "npm install sonar-scanner"
-                        sh "npm run sonar"
-                    }
+                    // Assuming you have Ansible installed on the Jenkins machine
+			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deply.yaml"
+                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
                 }
             }
         }
