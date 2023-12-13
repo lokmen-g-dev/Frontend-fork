@@ -9,7 +9,7 @@ pipeline {
         NEXUS_REPOSITORY = "back-end" 
         NEXUS_CREDENTIAL_ID = "admin"
         DOCKER_IMAGE_NAME = "front-end"
-	BUILD_NUMBER = "40"
+	BUILD_NUMBER = "${BUILD_NUMBER}"
         DOCKER_IMAGE_TAG = "${NEXUS_REPOSITORY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}" 
     }
     stages {
@@ -57,7 +57,7 @@ pipeline {
 	    stage('Ansible Deployment') {
             steps {
                 script {
-                    // Assuming you have Ansible installed on the Jenkins machine
+                    
 			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deply.yaml"
                     sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
                 }
