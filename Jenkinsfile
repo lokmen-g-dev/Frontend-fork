@@ -21,19 +21,7 @@ pipeline {
                 }
             }
         }
-	         stage('Sonar Analysis') {
-            steps {
-                script {
-                    nodejs(nodeJSInstallationName: 'Node') {
-                        sh "npm install"
-                        sh "npm install sonar-scanner"
-                        sh "npm run sonar"
-                    }
-                }
-            }
-        }
-	     
-	         stage('Build Docker Image') {
+	    	         stage('Build Docker Image') {
             steps {
                 script {
                     // Build the Docker image
@@ -54,6 +42,19 @@ pipeline {
                 }
             }
         }
+	         stage('Sonar Analysis') {
+            steps {
+                script {
+                    nodejs(nodeJSInstallationName: 'Node') {
+                        sh "npm install"
+                        sh "npm install sonar-scanner"
+                        sh "npm run sonar"
+                    }
+                }
+            }
+        }
+	     
+
 	    stage('Ansible Deployment') {
             steps {
                 script {
