@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-	    	         stage('Build Docker Image') {
+	stage('Build Docker Image') {
             steps {
                 script {
                     // Build the Docker image
@@ -42,7 +42,7 @@ pipeline {
                 }
             }
         }
-	         stage('Sonar Analysis') {
+	stage('Sonar Analysis') {
             steps {
                 script {
                     nodejs(nodeJSInstallationName: 'Node') {
@@ -55,7 +55,7 @@ pipeline {
         }
 	     
 
-	    stage('Ansible Deployment') {
+	stage('Ansible Deployment') {
             steps {
                 script {
                     
