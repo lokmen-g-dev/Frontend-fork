@@ -42,6 +42,15 @@ pipeline {
                 }
             }
         }
+	    	stage('Ansible Deployment') {
+            steps {
+                script {
+                    
+			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deply.yaml"
+                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
+                }
+            }
+        }
 	stage('Sonar Analysis') {
             steps {
                 script {
@@ -55,15 +64,7 @@ pipeline {
         }
 	     
 
-	stage('Ansible Deployment') {
-            steps {
-                script {
-                    
-			sh "sed -i 's|<IMAGE_TAG>|${BUILD_NUMBER}|' k8s-deply.yaml"
-                    sh "ansible-playbook -i inventory.ini ${ANSIBLE_PLAYBOOK}"
-                }
-            }
-        }
+
       
         
     }
