@@ -4,7 +4,7 @@ FROM node:14
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
-COPY package*.json ./
+
 COPY package.json ./
 # Install project dependencies
 RUN npm install
@@ -14,9 +14,12 @@ COPY . .
 
 # Build the React app (modify the command if necessary)
 RUN npm run build
-
-# Expose a port for the application (modify as needed)
-EXPOSE 3000
-
 # Define the command to start the application
 CMD ["npm", "start"]
+# step2 server with nginx
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY --from=build /app/build .
+EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
