@@ -1,37 +1,42 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
-
+    branches: [main]
 
 jobs:
   build:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Login to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker Image
+        run: docker build -t lokmen66/front .
+
+      - name: Publish image to Docker Hub
+        run: docker push lokmen66/front:latest
+
+  deploy:
+    needs: build
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v3
-    - name: Login to Docker Hub
-      uses: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}
-    - name: Build Docker Image
-      run: docker build -t lokmen66/front .
-    - name: publish image to docker HUP
-      run: docker push lokmen66/front:latest
+      - name: Pull image from Docker Hub
+        run: docker pull lokmen66/front:latest
 
- deploy:
-   needs: build
-   runs-on: ip-172-31-37-208
-   steps:
-     - name: Pull image from docker Hup
-       run: docker pull lokmen66/front:latest
-     - name: Delete Old container
-       run: docker rm -f front-container
-     - name: run docker container
-       run: docker run -d -p 3000:80 --name front-container lokmen66/front:latest
-   
-    
+      - name: Delete Old container
+        run: docker rm -f front-container || true
 
- 
+      - name: Run Docker container
+        run: docker run -d -p 3000:80 --name front-container lokmen66/front:latest
