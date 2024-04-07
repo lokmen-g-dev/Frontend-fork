@@ -12,19 +12,28 @@ jobs:
   build:
 
     runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --force
+    - name: Login to Docker Hub
+      uses: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}
+    - name: Build Docker Image
+      run: docker build -t lokmen66/front .
+    - name: publish image to docker HUP
+      run: docker push lokmen66/front:latest
+
+ deploy:
+   needs: build
+   runs-on: ip-172-31-37-208
+   steps:
+     - name: Pull image from docker Hup
+       run: docker pull lokmen66/front:latest
+     - name: Delete Old container
+       run: docker rm -f front-container
+     - name: run docker container
+       run: docker run -d -p 3000:80 --name front-container lokmen66/front:latest
+   
+    
+
  
