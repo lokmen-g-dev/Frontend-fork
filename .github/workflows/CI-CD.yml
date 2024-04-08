@@ -50,4 +50,4 @@ jobs:
         run: docker rm -f front-container || true
 
       - name: Run Docker container
-        run: docker run -d -p 80:80 --name front-container lokmen66/front:latest
+        run: docker run -d -p 80:80 --name front-container lokmen66/front:latest 
