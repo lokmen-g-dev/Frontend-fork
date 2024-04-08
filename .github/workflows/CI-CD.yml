@@ -1,53 +1,33 @@
-name: CI/CD
+name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
+
 
 jobs:
   build:
-    runs-on: self-hosted
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-
-  Login_docker_hub: 
-    needs: build
     runs-on: self-hosted
     steps:
-      - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+    - name: Login to Docker Hub
+      uses: docker login -u ${{secrets.DOCKER_USER_NAME}} -p ${{secrets.DOCKER_PASSWORD}}
+    - name: Build Docker Image
+      run: docker build -t lokmen66/front .
+    - name: publish image to docker HUP
+      run: docker push lokmen66/front:latest
 
-  Build_Docker_file:
-    needs: Login_docker_hub
-    runs-on: self-hosted
-    steps:
-      - name: Build Docker Image
-        run: docker build -t lokmen66/front .
-  Push_container:
-    needs: Build_Docker_file
-    runs-on: self-hosted
-    steps:
-      - name: Publish image to Docker Hub
-        run: docker push lokmen66/front:latest
-
-  deploy:
-    needs:  Push_container
-    runs-on: self-hosted
-    steps:
-      - name: Pull image from Docker Hub
-        run: docker pull lokmen66/front:latest
-
-      - name: Delete Old container
-        run: docker rm -f front-container || true
-
-      - name: Run Docker container
-        run: docker run -d -p 80:80 --name front-container lokmen66/front:latest 
+ deploy:
+   needs: build
+   runs-on: ip-172-31-37-208
+   steps:
+     - name: Pull image from docker Hup
+       run: docker pull lokmen66/front:latest
+     - name: Delete Old container
+       run: docker rm -f front-container
+     - name: run docker container
+       run: docker run -d -p 80:80 --name front-container lokmen66/front:latest
+   
