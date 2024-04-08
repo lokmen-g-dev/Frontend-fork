@@ -20,6 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
   Login_docker_hub: 
+    needs: build
     runs-on: self-hosted
     steps:
       - name: Login to Docker Hub
@@ -38,7 +39,7 @@ jobs:
         run: docker push lokmen66/front:latest
 
   deploy:
-    needs: build
+    needs:  Push_container
     runs-on: self-hosted
     steps:
       - name: Pull image from Docker Hub
