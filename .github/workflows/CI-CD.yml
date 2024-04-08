@@ -27,6 +27,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
   Build_Docker_file:
+    needs: Login_docker_hub
     runs-on: self-hosted
     steps:
       - name: Build Docker Image
