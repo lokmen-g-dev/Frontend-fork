@@ -1,33 +1,53 @@
-name: Node.js CI
+name: CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+
+  Login_docker_hub: 
+    needs: build
+    runs-on: self-hosted
+    steps:
       - name: Login to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USER_NAME }} --password-stdin
+        run: docker login -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+  Build_Docker_file:
+    needs: Login_docker_hub
+    runs-on: self-hosted
+    steps:
       - name: Build Docker Image
         run: docker build -t lokmen66/front .
+  Push_container:
+    needs: Build_Docker_file
+    runs-on: self-hosted
+    steps:
       - name: Publish image to Docker Hub
         run: docker push lokmen66/front:latest
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
+    needs:  Push_container
+    runs-on: self-hosted
     steps:
       - name: Pull image from Docker Hub
         run: docker pull lokmen66/front:latest
-      - name: Delete old container
+
+      - name: Delete Old container
         run: docker rm -f front-container || true
+
       - name: Run Docker container
-        run: docker run -d -p 80:80 --name front-container lokmen66/front:latest
+        run: docker run -d -p 80:80 --name front-container lokmen66/front:latest 
