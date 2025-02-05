@@ -21,3 +21,5 @@
  
     - name: Apply secret.yaml using kubectl
       command: "kubectl apply -f secret.yaml"
+
+
