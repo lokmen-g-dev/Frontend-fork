@@ -19,3 +19,5 @@ spec:
         - containerPort: 3000
       imagePullSecrets:
         - name: docker-registry-credentials
+
+        
